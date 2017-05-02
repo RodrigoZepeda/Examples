@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Rodrigo Zepeda Tello">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <title>K Nearest Neighbors (KNN)</title>
+
+    <script src="script/d3.min.js"></script>
+
+
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true, }, TeX: { equationNumbers: { autoNumber: "AMS" } } });
+    </script>
+</head>
+
+<body>
+    <div id="fig1" class="panel panel-default">
+        <div class="panel-heading" id="fig1title">
+            <h4>KNN Algorithm</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="form-group">
+                </div>
+                <div class="col-lg-9" id="knn" style="text-align:center;">
+                </div>
+                <div class=" form-group col-lg-2 well" id="control" style="margin-top: 10%; text-align: left;">
+
+                    <label class="control-label " for="ssize">Sample</label>
+                    <input class="form-control input-sm" id="ssize" type="number " min="1" max="10000" value="1000" step="25">
+
+                    <label class="control-label " for="k">Neighbors ($k$)</label>
+                    <input class="form-control input-sm" id="k" type="number " min="1" max="99" value="5" step="1">
+
+                    <label class="control-label " for="circulo">
+                            <input type="checkbox" class="form" id="circulo" name="circ" value=true>
+                            Norm $2$
+                        </label>
+                    <label class="control-label " for="cuadrado" style="margin-top: 5px;">
+                            <input type="checkbox" class="form" id="cuadrado" name="rect" value=true> 
+                            Norm $\infty$
+                    </label>
+
+                    <label class="control-label " for="classify" style="margin-top: 5px;">
+                            <input type="checkbox" class="form" id="classify" name="classify" value=true> 
+                            Classify
+                    </label>
+
+                    <div class="row" style="margin-top: 10px; text-align:center;">
+                        <a class="btn btn-danger btn-xs" id="borrar">Restart</a>
+                    </div>
+
+                </div>
+                <script src="script/KNN.js "></script>
+            </div>
+            <div class="well panel">
+                <h4>
+                    $KNN$ Algorithm
+                </h4>
+                <p>
+                    The <a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm">  $KNN$ algorithm </a>considers a given sample of points classified according to a category. For a new point, it classifies the point according to the category
+                    of the majority of its $k$ neighbors (in the example, if the majority are <span style="color: green;"> green </span> KNN classifies them <span style="color: green;"> as green</span>; if the majority are <span style="color: orange;"> yellow </span>                    it classifies them as <span style="color: orange;"> yellow </span>; in case of a tie it does not classify and they appear <span style="color:black;"> black </span>).
+                </p>
+                <h4>
+                    Instructions
+                </h4>
+                <p>
+                    Click the plot to generate a new point in <span style="color: red;"> red </span>. Choose the metric in which the $k$ neighbors will be considered (either) <a href="https://en.wikipedia.org/wiki/Euclidean_distance"> euclidean norm </a>                    or <a href="https://books.google.com.mx/books?id=0bfvQQJzYgoC&pg=PP423&lpg=PP423&dq=sup+norm+euclidean&source=bl&ots=yL-_ZKV7nC&sig=WUoqOTJuAsrelFTUpvReLEJj0sI&hl=es-419&sa=X&ved=0ahUKEwixsse72s_TAhVCzIMKHd6SCi8Q6AEIajAJ#v=onepage&q=sup%20norm%20euclidean&f=false">infinity norm</a>).
+                    Around the point the area comprised by the norm will appear. Use the <b> Classify </b> button to categorize your point (the area will be coloured according to the category). To delete a point use the keyboard. To change the number
+                    of initial points change the value in <b> Sample </b>. Use the <b> Restart </b> button to generate a new sample.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
