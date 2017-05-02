@@ -26,7 +26,7 @@
 <body>
     <div id="fig1" class="panel panel-default">
         <div class="panel-heading" id="fig1title">
-            <h4>KNN Algorithm</h4>
+            <h2>KNN Algorithm</h2>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -65,19 +65,25 @@
             </div>
             <div class="well panel">
                 <h4>
-                    $KNN$ Algorithm
+                    Instructions
+                </h4>
+                <p>
+                    <ol>
+                        <li>Click the plot to generate a new point in <span style="color: red;"> red </span>. </li>
+                        <li> Choose the metric in which the $k$ neighbors will be considered (either) <a href="https://en.wikipedia.org/wiki/Euclidean_distance"> euclidean norm </a> or <a href="https://books.google.com.mx/books?id=0bfvQQJzYgoC&pg=PP423&lpg=PP423&dq=sup+norm+euclidean&source=bl&ots=yL-_ZKV7nC&sig=WUoqOTJuAsrelFTUpvReLEJj0sI&hl=es-419&sa=X&ved=0ahUKEwixsse72s_TAhVCzIMKHd6SCi8Q6AEIajAJ#v=onepage&q=sup%20norm%20euclidean&f=false">infinity norm</a>.
+                            Around the point the area comprised by the norm will appear.</li>
+                        <li> Use the <b> Classify </b> button to categorize your point (the area will be coloured according to the category). </li>
+                        <li> To delete a point use the keyboard <b> delete </b> button. </li>
+                        <li> To change the number of initial points change the value in <b> Sample </b>. </li>
+                        <li> Use the <b> Restart </b> button to generate a new sample.</li>
+                    </ol>
+                </p>
+                <h4>
+                    KNN Algorithm
                 </h4>
                 <p>
                     The <a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm">  $KNN$ algorithm </a>considers a given sample of points classified according to a category. For a new point, it classifies the point according to the category
                     of the majority of its $k$ neighbors (in the example, if the majority are <span style="color: green;"> green </span> KNN classifies them <span style="color: green;"> as green</span>; if the majority are <span style="color: orange;"> yellow </span>                    it classifies them as <span style="color: orange;"> yellow </span>; in case of a tie it does not classify and they appear <span style="color:black;"> black </span>).
-                </p>
-                <h4>
-                    Instructions
-                </h4>
-                <p>
-                    Click the plot to generate a new point in <span style="color: red;"> red </span>. Choose the metric in which the $k$ neighbors will be considered (either) <a href="https://en.wikipedia.org/wiki/Euclidean_distance"> euclidean norm </a>                    or <a href="https://books.google.com.mx/books?id=0bfvQQJzYgoC&pg=PP423&lpg=PP423&dq=sup+norm+euclidean&source=bl&ots=yL-_ZKV7nC&sig=WUoqOTJuAsrelFTUpvReLEJj0sI&hl=es-419&sa=X&ved=0ahUKEwixsse72s_TAhVCzIMKHd6SCi8Q6AEIajAJ#v=onepage&q=sup%20norm%20euclidean&f=false">infinity norm</a>).
-                    Around the point the area comprised by the norm will appear. Use the <b> Classify </b> button to categorize your point (the area will be coloured according to the category). To delete a point use the keyboard. To change the number
-                    of initial points change the value in <b> Sample </b>. Use the <b> Restart </b> button to generate a new sample.
                 </p>
             </div>
         </div>
